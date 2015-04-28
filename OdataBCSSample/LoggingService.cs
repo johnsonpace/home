@@ -18,7 +18,7 @@ namespace OdataBCSSample
         };
 
 
-        public static string FDAESDiagnosticAreaName = "FDA.ES";
+        public static string FDAESDiagnosticAreaName = "JP.CONTENT";
         private static LoggingService _Current;
         public static LoggingService Current
         {
@@ -34,7 +34,7 @@ namespace OdataBCSSample
         }
 
         private LoggingService()
-            : base("FDA.ES.Logging", SPFarm.Local)
+            : base("JP.CONTENT.Logging", SPFarm.Local)
         {
 
         }
