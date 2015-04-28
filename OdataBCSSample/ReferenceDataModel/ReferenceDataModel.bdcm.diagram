@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<minimalLanguageDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ReferenceDataModel">
+  <modelRootMoniker Name="/ReferenceDataModel" />
+  <nestedChildShapes>
+    <entityShape Id="865ddaab-8dd6-43be-81e8-8ea76b7c2989" absoluteBounds="1.125, 0.875, 1.5, 1.9210009765625">
+      <entityMoniker name="OdataBCSSample.ReferenceDataModel.BRStatusView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e6090477-efe5-434b-b417-a26a57ef0338" absoluteBounds="1.1399999999999997, 1.2850000000000001, 1.4700000000000002, 0.37180582682291663" name="Identifiers" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="22aa35c6-6495-4627-98a7-36fbecc594ec" absoluteBounds="1.14, 1.6668058268229167, 1.4700000000000002, 1.0291951497395833" name="Methods" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </entityShape>
+    <entityShape Id="e1ea7f96-3eab-4854-98f5-9262614bdab4" absoluteBounds="7, 1.25, 1.5, 2.085348307291667">
+      <entityMoniker name="OdataBCSSample.ReferenceDataModel.Smalblock" />
+      <nestedChildShapes>
+        <elementListCompartment Id="383b56ad-9cee-4c97-81d6-222062e216ab" absoluteBounds="7.015, 1.6600000000000001, 1.4700000000000002, 0.37180582682291663" name="Identifiers" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="f5892e02-1a45-49d1-810b-3bdd35e79af5" absoluteBounds="7.015, 2.0418058268229169, 1.4700000000000002, 1.19354248046875" name="Methods" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </entityShape>
+    <associationGroupConnector edgePoints="[(7 : 2.02300048828125); (2.625 : 2.02300048828125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <associationGroupMoniker name="/OdataBCSSample.ReferenceDataModel.Smalblock/SmalblockToBRStatusViewAssociation" />
+      <relativeChildShapes />
+      <nodes>
+        <entityShapeMoniker Id="e1ea7f96-3eab-4854-98f5-9262614bdab4" />
+        <entityShapeMoniker Id="865ddaab-8dd6-43be-81e8-8ea76b7c2989" />
+      </nodes>
+    </associationGroupConnector>
+  </nestedChildShapes>
+</minimalLanguageDiagram>

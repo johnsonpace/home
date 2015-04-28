@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Url="Lists/RclBRstatuss" Description="RclBRstatuss" OnQuickLaunch="TRUE" Title="RclBRstatuss">
+    <DataSource>
+      <Property Name="LobSystemInstance" Value="referencedata" />
+      <Property Name="EntityNamespace" Value="ReclamationOdataServiceModels" />
+      <Property Name="Entity" Value="RclBRstatuss" />
+      <Property Name="SpecificFinder" Value="ReadSpecificRclBRstatus" />
+      <Property Name="MetadataCatalogFileName" Value="BDCMetadata.bdcm" />
+    </DataSource>
+  </ListInstance>
+</Elements>

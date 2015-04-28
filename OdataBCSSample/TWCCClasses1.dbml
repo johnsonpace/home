@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TWCC" Class="TWCCClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.SmallBlocks" Member="SmallBlocks">
+    <Type Name="SmallBlock">
+      <Column Name="FeatId" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="CompanyID" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="SmallBlock" Member="SmallBlock1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SmallAC" Type="System.Decimal" DbType="Decimal(3,1)" CanBeNull="true" />
+      <Column Name="LargeBlock" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MineArea" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="d88610e8-2e86-4759-9e27-992373ef92f3" 
+        solutionId="d88610e8-2e86-4759-9e27-992373ef92f3" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="ReclamationBCS"
+        sharePointProductVersion="15.0">
+  <features>
+        <featureReference itemId="652d7334-0625-4380-af36-75e3dba5d2ae" />
+  </features>
+</package>

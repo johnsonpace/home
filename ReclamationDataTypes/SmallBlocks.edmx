@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TWCCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="SmallBlocks">
+          <Key>
+            <PropertyRef Name="FeatId" />
+          </Key>
+          <Property Name="FeatId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="smallint" />
+          <Property Name="CompanyID" Type="nvarchar" MaxLength="10" />
+          <Property Name="SmallBlock" Type="nvarchar" MaxLength="50" />
+          <Property Name="SmallAC" Type="decimal" Precision="3" Scale="1" />
+          <Property Name="LargeBlock" Type="nvarchar" MaxLength="50" />
+          <Property Name="MineArea" Type="nvarchar" MaxLength="10" />
+          <Property Name="Geometry" Type="geometry" />
+        </EntityType>
+        <EntityContainer Name="TWCCModelStoreContainer">
+          <EntitySet Name="SmallBlocks" EntityType="Self.SmallBlocks" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TWCCModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="SmallBlock">
+          <Key>
+            <PropertyRef Name="FeatId" />
+          </Key>
+          <Property Name="FeatId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Type="Int16" />
+          <Property Name="CompanyID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="SmallBlock1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SmallAC" Type="Decimal" Precision="3" Scale="1" />
+          <Property Name="LargeBlock" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MineArea" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Geometry" Type="Geometry" />
+        </EntityType>
+        <EntityContainer Name="TWCCEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SmallBlocks" EntityType="Self.SmallBlock" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TWCCModelStoreContainer" CdmEntityContainer="TWCCEntities">
+          <EntitySetMapping Name="SmallBlocks">
+            <EntityTypeMapping TypeName="TWCCModel.SmallBlock">
+              <MappingFragment StoreEntitySet="SmallBlocks">
+                <ScalarProperty Name="FeatId" ColumnName="FeatId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+                <ScalarProperty Name="SmallBlock1" ColumnName="SmallBlock" />
+                <ScalarProperty Name="SmallAC" ColumnName="SmallAC" />
+                <ScalarProperty Name="LargeBlock" ColumnName="LargeBlock" />
+                <ScalarProperty Name="MineArea" ColumnName="MineArea" />
+                <ScalarProperty Name="Geometry" ColumnName="Geometry" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

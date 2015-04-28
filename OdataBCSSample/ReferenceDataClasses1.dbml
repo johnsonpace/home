@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ReferenceData" Class="ReferenceDataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.Recl_BRstatus" Member="Recl_BRstatus">
+    <Type Name="Recl_BRstatus">
+      <Column Name="BlockID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phase" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="BRstatus" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DateInitiated" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DateApproved" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

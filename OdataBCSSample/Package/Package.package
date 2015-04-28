@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="a65b5fe4-8fff-4931-8a6e-3641859b3f2e" solutionId="a65b5fe4-8fff-4931-8a6e-3641859b3f2e" resetWebServer="false" sharePointProductVersion="15.0" name="OdataBCSSample" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="66410558-c114-43bf-ab61-4547acf240e4" />
+    <featureReference itemId="c657875d-e4e9-4208-9822-7484335ea2b2" />
+  </features>
+</package>

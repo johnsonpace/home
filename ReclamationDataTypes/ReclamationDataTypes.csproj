@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{693B1C3B-2FC5-4ED1-8EFE-1F7149DF9DFB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ReclamationDataTypes</RootNamespace>
+    <AssemblyName>ReclamationDataTypes</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BRStatus.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BRStatus.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BRStatus.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BRStatus.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BRStatus.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BRStatus.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recl_BRstatus.cs">
+      <DependentUpon>BRStatus.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SmallBlock.cs">
+      <DependentUpon>SmallBlocks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SmallBlocks.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmallBlocks.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SmallBlocks.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmallBlocks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SmallBlocks.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmallBlocks.edmx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="BRStatus.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BRStatus.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="BRStatus.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BRStatus.edmx</DependentUpon>
+      <LastGenOutput>BRStatus.Context.cs</LastGenOutput>
+    </None>
+    <None Include="BRStatus.edmx.diagram">
+      <DependentUpon>BRStatus.edmx</DependentUpon>
+    </None>
+    <None Include="BRStatus.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BRStatus.edmx</DependentUpon>
+      <LastGenOutput>BRStatus.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <EntityDeploy Include="SmallBlocks.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SmallBlocks.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="SmallBlocks.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SmallBlocks.edmx</DependentUpon>
+      <LastGenOutput>SmallBlocks.Context.cs</LastGenOutput>
+    </None>
+    <None Include="SmallBlocks.edmx.diagram">
+      <DependentUpon>SmallBlocks.edmx</DependentUpon>
+    </None>
+    <None Include="SmallBlocks.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SmallBlocks.edmx</DependentUpon>
+      <LastGenOutput>SmallBlocks.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

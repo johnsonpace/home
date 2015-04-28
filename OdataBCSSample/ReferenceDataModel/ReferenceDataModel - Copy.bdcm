@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/windows/2007/BusinessDataCatalog" Name="ReferenceDataModel">
+  <LobSystems>
+    <LobSystem Name="ReferenceDataModel" Type="DotNetAssembly">
+      <LobSystemInstances>
+        <LobSystemInstance Name="ReferenceDataModel" />
+      </LobSystemInstances>
+      <Entities>
+        <Entity Name="BRStatusView" Namespace="OdataBCSSample.ReferenceDataModel" Version="1.0.0.228">
+          <Properties>
+            <Property Name="Class" Type="System.String">OdataBCSSample.ReferenceDataModel.BRStatusViewService, ReferenceDataModel</Property>
+          </Properties>
+          <Identifiers>
+            <Identifier Name="ID" TypeName="System.Int32" />
+          </Identifiers>
+          <Methods>
+            <Method Name="ReadList">
+              <Parameters>
+                <Parameter Name="bRStatusViewList" Direction="Return">
+                  <TypeDescriptor Name="BRStatusViewList" TypeName="System.Collections.Generic.IEnumerable`1[System.String]" IsCollection="true">
+                    <TypeDescriptors>
+                      <TypeDescriptor Name="BRStatusView" TypeName="OdataBCSSample.BRStatusView, ReferenceDataModel" IsCollection="false">
+                        <TypeDescriptors>
+                          <TypeDescriptor Name="ID" TypeName="System.Int32" IsCollection="false" IdentifierName="ID" />
+                          <TypeDescriptor Name="MineArea" TypeName="System.String" />
+                          <TypeDescriptor Name="Notes" TypeName="System.String" />
+                          <TypeDescriptor Name="DateApproved" TypeName="System.DateTime" IsCollection="false" />
+                          <TypeDescriptor Name="DateInitiated" TypeName="System.DateTime" IsCollection="false" />
+                          <TypeDescriptor Name="BRStatus" TypeName="System.String" />
+                          <TypeDescriptor Name="Phase" TypeName="System.Byte" IsCollection="false" />
+                          <TypeDescriptor Name="BlockID" TypeName="System.String" ForeignIdentifierAssociationEntityName="Smalblock" ForeignIdentifierAssociationEntityNamespace="OdataBCSSample.ReferenceDataModel" ForeignIdentifierAssociationName="SmalblockToBRStatusViewAssociationNavigator" IdentifierEntityName="Smalblock" IdentifierEntityNamespace="OdataBCSSample.ReferenceDataModel" IdentifierName="SmallBlock1" />
+                          <TypeDescriptor Name="SmallAC" TypeName="System.Decimal" IsCollection="false" /></TypeDescriptors></TypeDescriptor></TypeDescriptors></TypeDescriptor></Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Name="ReadList" Type="Finder" ReturnParameterName="bRStatusViewList" ReturnTypeDescriptorPath="BRStatusViewList" />
+              </MethodInstances></Method>
+            <Method Name="Create">
+              <Parameters>
+                <Parameter Name="returnBRStatusView" Direction="Return">
+                  <TypeDescriptor Name="ReturnBRStatusView" IsCollection="false" TypeName="OdataBCSSample.BRStatusView, ReferenceDataModel">
+                    <TypeDescriptors>
+                      <TypeDescriptor Name="ID" IdentifierName="ID" IsCollection="false" TypeName="System.Int32" />
+                      <TypeDescriptor Name="MineArea" TypeName="System.String" />
+                      <TypeDescriptor Name="Notes" TypeName="System.String" />
+                      <TypeDescriptor Name="DateApproved" IsCollection="false" TypeName="System.DateTime" />
+                      <TypeDescriptor Name="DateInitiated" IsCollection="false" TypeName="System.DateTime" />
+                      <TypeDescriptor Name="BRStatus" TypeName="System.String" />
+                      <TypeDescriptor Name="Phase" IsCollection="false" TypeName="System.Byte" />
+                      <TypeDescriptor Name="BlockID" TypeName="System.String" IdentifierEntityName="Smalblock" IdentifierEntityNamespace="OdataBCSSample.ReferenceDataModel" IdentifierName="SmallBlock1" ForeignIdentifierAssociationEntityName="Smalblock" ForeignIdentifierAssociationEntityNamespace="OdataBCSSample.ReferenceDataModel" ForeignIdentifierAssociationName="SmalblockToBRStatusViewAssociationNavigator" />
+                      <TypeDescriptor Name="SmallAC" TypeName="System.Decimal" IsCollection="false" /></TypeDescriptors></TypeDescriptor></Parameter>
+                <Parameter Name="newBRStatusView" Direction="In">
+                  <TypeDescriptor Name="NewBRStatusView" IsCollection="false" TypeName="OdataBCSSample.BRStatusView, ReferenceDataModel">
+                    <TypeDescriptors>
+                      <TypeDescriptor Name="ID" IdentifierName="ID" IsCollection="false" TypeName="System.Int32" CreatorField="true" />
+                      <TypeDescriptor Name="MineArea" TypeName="System.String" CreatorField="true" />
+                      <TypeDescriptor Name="Notes" TypeName="System.String" CreatorField="true" />
+                      <TypeDescriptor Name="DateApproved" IsCollection="false" TypeName="System.DateTime" CreatorField="true" />
+                      <TypeDescriptor Name="DateInitiated" IsCollection="false" TypeName="System.DateTime" CreatorField="true" />
+                      <TypeDescriptor Name="BRStatus" TypeName="System.String" CreatorField="true" />
+                      <TypeDescriptor Name="Phase" TypeName="System.Byte" CreatorField="true" />
+                      <TypeDescriptor Name="BlockID" TypeName="System.String" CreatorField="true" IdentifierEntityName="Smalblock" IdentifierEntityNamespace="OdataBCSSample.ReferenceDataModel" IdentifierName="SmallBlock1" ForeignIdentifierAssociationEntityName="Smalblock" ForeignIdentifierAssociationEntityNamespace="OdataBCSSample.ReferenceDataModel" ForeignIdentifierAssociationName="SmalblockToBRStatusViewAssociationNavigator" />
+                      <TypeDescriptor Name="SmallAC" TypeName="System.Decimal" CreatorField="true" /></TypeDescriptors></TypeDescriptor></Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Name="Create" Type="Creator" ReturnParameterName="returnBRStatusView" ReturnTypeDescriptorPath="ReturnBRStatusView" />
+              </MethodInstances></Method>
+            <Method Name="Delete">
+              <Parameters>
+                <Parameter Name="iD" Direction="In">
+                  <TypeDescriptor Name="ID" TypeName="System.Int32" IdentifierEntityName="BRStatusView" IdentifierEntityNamespace="OdataBCSSample.ReferenceDataModel" IdentifierName="ID" /></Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Name="Delete" Type="Deleter" />
+              </MethodInstances></Method>
+            <Method Name="Update">
+              <Parameters>
+                <Parameter Name="bRStatusView" Direction="In">
+                  <TypeDescriptor Name="BRStatusView" IsCollection="false" TypeName="OdataBCSSample.BRStatusView, ReferenceDataModel">
+                    <TypeDescriptors>
+                      <TypeDescriptor Name="ID" IdentifierName="ID" IsCollection="false" TypeName="System.Int32" UpdaterField="true" />
+                      <TypeDescriptor Name="MineArea" TypeName="System.String" UpdaterField="true" ReadOnly="false" />
+                      <TypeDescriptor Name="Notes" TypeName="System.String" UpdaterField="true" />
+                      <TypeDescriptor Name="DateApproved" IsCollection="false" TypeName="System.DateTime" UpdaterField="true" />
+                      <TypeDescriptor Name="DateInitiated" IsCollection="false" TypeName="System.DateTime" UpdaterField="true" />
+                      <TypeDescriptor Name="BRStatus" TypeName="System.String" UpdaterField="true" />
+                      <TypeDescriptor Name="Phase" TypeName="System.Byte" UpdaterField="true" />
+                      <TypeDescriptor Name="BlockID" TypeName="System.String" UpdaterField="true" IdentifierEntityName="Smalblock" IdentifierEntityNamespace="OdataBCSSample.ReferenceDataModel" IdentifierName="SmallBlock1" ForeignIdentifierAssociationEntityName="Smalblock" ForeignIdentifierAssociationEntityNamespace="OdataBCSSample.ReferenceDataModel" ForeignIdentifierAssociationName="SmalblockToBRStatusViewAssociationNavigator" DefaultDisplayName="Small Block Item Picker" />
+                    <TypeDescriptor Name="SmallAC" TypeName="System.Decimal" ReadOnly="false" UpdaterField="true">
+                        </TypeDescriptor>
+                        </TypeDescriptors></TypeDescriptor></Parameter>
+                <Parameter Name="ID" Direction="In">
+                  <TypeDescriptor Name="ID" TypeName="System.Int32" IdentifierName="ID" PreUpdaterField="true" IsCollection="false" /></Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Name="Update" Type="Updater" />
+              </MethodInstances></Method>
+            <Method Name="ReadItem">
+              <Parameters>
+                <Parameter Name="bRStatusView" Direction="Return">
+                  <TypeDescriptor Name="BRStatusView" IsCollection="false" TypeName="OdataBCSSample.BRStatusView, ReferenceDataModel">
+                    <TypeDescriptors>
+                      <TypeDescriptor Name="ID" IdentifierName="ID" IsCollection="false" TypeName="System.Int32" />
+                      <TypeDescriptor Name="MineArea" TypeName="System.String" />
+                      <TypeDescriptor Name="Notes" TypeName="System.String" />
+                      <TypeDescriptor Name="DateApproved" IsCollection="false" TypeName="System.DateTime" />
+                      <TypeDescriptor Name="DateInitiated" IsCollection="false" TypeName="System.DateTime" />
+                      <TypeDescriptor Name="BRStatus" TypeName="System.String" />
+                      <TypeDescriptor Name="Phase" IsCollection="false" TypeName="System.Byte" />
+                      <TypeDescriptor Name="BlockID" TypeName="System.String" ForeignIdentifierAssociationEntityName="Smalblock" ForeignIdentifierAssociationEntityNamespace="OdataBCSSample.ReferenceDataModel" ForeignIdentifierAssociationName="SmalblockToBRStatusViewAssociationNavigator" IdentifierEntityName="Smalblock" IdentifierEntityNamespace="OdataBCSSample.ReferenceDataModel" IdentifierName="SmallBlock1" />
+                      <TypeDescriptor Name="SmallAC" IsCollection="false" TypeName="System.Decimal" /></TypeDescriptors></TypeDescriptor></Parameter>
+                <Parameter Name="iD" Direction="In">
+                  <TypeDescriptor Name="ID" TypeName="System.Int32" IdentifierEntityName="BRStatusView" IdentifierEntityNamespace="OdataBCSSample.ReferenceDataModel" IdentifierName="ID" /></Parameter>
+                <Parameter Name="smallBlock" Direction="In">
+                  <TypeDescriptor Name="SmallBlock" TypeName="System.String" /></Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Name="ReadItem" Type="SpecificFinder" ReturnParameterName="bRStatusView" ReturnTypeDescriptorPath="BRStatusView" />
+              </MethodInstances></Method>
+          </Methods>
+          <AssociationGroups>
+            <AssociationGroup Name="SmalblockToBRStatusViewAssociation">
+              <AssociationReference EntityName="Smalblock" EntityNamespace="OdataBCSSample.ReferenceDataModel" AssociationName="SmalblockToBRStatusViewAssociationNavigator" Reverse="false" />
+            </AssociationGroup>
+          </AssociationGroups>
+          </Entity>
+        <Entity Name="Smalblock" Namespace="OdataBCSSample.ReferenceDataModel" Version="1.0.0.73">
+          <Properties>
+            <Property Name="Class" Type="System.String">OdataBCSSample.ReferenceDataModel.SmalblockService, ReferenceDataModel</Property>
+          </Properties>
+          <Identifiers>
+            <Identifier Name="SmallBlock1" TypeName="System.String" />
+          </Identifiers>
+          <Methods>
+            <Method Name="ReadList">
+              <Parameters>
+                <Parameter Name="smalblockList" Direction="Return">
+                  <TypeDescriptor Name="SmalblockList" TypeName="System.Collections.Generic.IEnumerable`1[[OdataBCSSample.SmallBlock, ReferenceDataModel]]" IsCollection="true">
+                    <TypeDescriptors>
+                      <TypeDescriptor Name="Smalblock" TypeName="OdataBCSSample.SmallBlock, ReferenceDataModel" IsCollection="false">
+                        <TypeDescriptors>
+                          <TypeDescriptor Name="SmallBlock1" TypeName="System.String" IdentifierName="SmallBlock1" />
+                          <TypeDescriptor Name="SmallAC" TypeName="System.Decimal" IsCollection="false" />
+                          <TypeDescriptor Name="MineArea" TypeName="System.String" />
+                          <TypeDescriptor Name="Id" TypeName="System.Int64" IsCollection="false" />
+                          <TypeDescriptor Name="CompanyID" TypeName="System.String" />
+                          <TypeDescriptor Name="LargeBlock" TypeName="System.String" />
+                          <TypeDescriptor Name="FeatId" TypeName="System.Int64" IsCollection="false" /></TypeDescriptors></TypeDescriptor></TypeDescriptors></TypeDescriptor></Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Name="ReadList" Type="Finder" ReturnParameterName="smalblockList" ReturnTypeDescriptorPath="SmalblockList" />
+              </MethodInstances></Method>
+            <Method Name="Update">
+              <Parameters>
+                <Parameter Name="smalblock" Direction="In">
+                  <TypeDescriptor Name="Smalblock" IsCollection="false" TypeName="OdataBCSSample.SmallBlock, ReferenceDataModel">
+                    <TypeDescriptors>
+                      <TypeDescriptor Name="SmallBlock1" TypeName="System.String" UpdaterField="true" IdentifierName="SmallBlock1" />
+                      <TypeDescriptor Name="SmallAC" IsCollection="false" TypeName="System.Decimal" UpdaterField="true" />
+                      <TypeDescriptor Name="MineArea" TypeName="System.String" UpdaterField="true" />
+                      <TypeDescriptor Name="Id" IsCollection="false" TypeName="System.Int64" UpdaterField="true" />
+                      <TypeDescriptor Name="CompanyID" TypeName="System.String" UpdaterField="true" />
+                      <TypeDescriptor Name="LargeBlock" TypeName="System.String" UpdaterField="true" />
+                      <TypeDescriptor Name="FeatId" IsCollection="false" TypeName="System.Int64" UpdaterField="true" /></TypeDescriptors></TypeDescriptor></Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Name="Update" Type="Updater" />
+              </MethodInstances></Method>
+            <Method Name="Create">
+              <Parameters>
+                <Parameter Name="returnSmalblock" Direction="Return">
+                  <TypeDescriptor Name="ReturnSmalblock" IsCollection="false" TypeName="OdataBCSSample.SmallBlock, ReferenceDataModel">
+                    <TypeDescriptors>
+                      <TypeDescriptor Name="SmallBlock1" TypeName="System.String" IdentifierName="SmallBlock1" />
+                      <TypeDescriptor Name="SmallAC" IsCollection="false" TypeName="System.Decimal" />
+                      <TypeDescriptor Name="MineArea" TypeName="System.String" />
+                      <TypeDescriptor Name="Id" IsCollection="false" TypeName="System.Int64" />
+                      <TypeDescriptor Name="CompanyID" TypeName="System.String" />
+                      <TypeDescriptor Name="LargeBlock" TypeName="System.String" />
+                      <TypeDescriptor Name="FeatId" IsCollection="false" TypeName="System.Int64" /></TypeDescriptors></TypeDescriptor></Parameter>
+                <Parameter Name="newSmalblock" Direction="In">
+                  <TypeDescriptor Name="NewSmalblock" IsCollection="false" TypeName="OdataBCSSample.SmallBlock, ReferenceDataModel">
+                    <TypeDescriptors>
+                      <TypeDescriptor Name="SmallBlock1" TypeName="System.String" CreatorField="true" />
+                      <TypeDescriptor Name="SmallAC" IsCollection="false" TypeName="System.Decimal" CreatorField="true" />
+                      <TypeDescriptor Name="MineArea" TypeName="System.String" CreatorField="true" />
+                      <TypeDescriptor Name="Id" IsCollection="false" TypeName="System.Int64" CreatorField="true" />
+                      <TypeDescriptor Name="CompanyID" TypeName="System.String" CreatorField="true" />
+                      <TypeDescriptor Name="LargeBlock" TypeName="System.String" CreatorField="true" />
+                      <TypeDescriptor Name="FeatId" IsCollection="false" TypeName="System.Int64" CreatorField="true" /></TypeDescriptors></TypeDescriptor></Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Name="Create" Type="Creator" ReturnParameterName="returnSmalblock" ReturnTypeDescriptorPath="ReturnSmalblock" />
+              </MethodInstances></Method>
+            <Method Name="Delete">
+              <Parameters>
+                <Parameter Name="id" Direction="In">
+                  <TypeDescriptor Name="Id" TypeName="System.Int64" /></Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Name="Delete" Type="Deleter" />
+              </MethodInstances></Method>
+            <Method Name="SmalblockToBRStatusView">
+              <Parameters>
+                <Parameter Name="smallBlock1" Direction="In">
+                  <TypeDescriptor Name="SmallBlock1" TypeName="System.String" IdentifierEntityName="Smalblock" IdentifierEntityNamespace="OdataBCSSample.ReferenceDataModel" IdentifierName="SmallBlock1" ForeignIdentifierAssociationEntityName="Smalblock" ForeignIdentifierAssociationEntityNamespace="OdataBCSSample.ReferenceDataModel" ForeignIdentifierAssociationName="SmalblockToBRStatusViewAssociationNavigator" /></Parameter>
+                <Parameter Name="bRStatusViewList" Direction="Return">
+                  <TypeDescriptor Name="BRStatusViewList" TypeName="System.Collections.Generic.IEnumerable`1[[OdataBCSSample.BRStatusView, ReferenceDataModel]]" IsCollection="true">
+                    <TypeDescriptors>
+                      <TypeDescriptor Name="BRStatusView" IsCollection="false" TypeName="OdataBCSSample.BRStatusView, ReferenceDataModel">
+                        <TypeDescriptors>
+                          <TypeDescriptor Name="ID" IsCollection="false" TypeName="System.Int32" IdentifierEntityName="BRStatusView" IdentifierEntityNamespace="OdataBCSSample.ReferenceDataModel" IdentifierName="ID" />
+                          <TypeDescriptor Name="MineArea" TypeName="System.String" />
+                          <TypeDescriptor Name="Notes" TypeName="System.String" />
+                          <TypeDescriptor Name="DateApproved" IsCollection="false" TypeName="System.DateTime" />
+                          <TypeDescriptor Name="DateInitiated" IsCollection="false" TypeName="System.DateTime" />
+                          <TypeDescriptor Name="BRStatus" TypeName="System.String" />
+                          <TypeDescriptor Name="Phase" IsCollection="false" TypeName="System.Byte" />
+                          <TypeDescriptor Name="BlockID" IdentifierEntityNamespace="OdataBCSSample.ReferenceDataModel" IdentifierEntityName="Smalblock" IdentifierName="SmallBlock1" ForeignIdentifierAssociationEntityNamespace="OdataBCSSample.ReferenceDataModel" ForeignIdentifierAssociationEntityName="Smalblock" ForeignIdentifierAssociationName="SmalblockToBRStatusViewAssociationNavigator" TypeName="System.String" />
+                          <TypeDescriptor Name="SmallAC" IsCollection="false" TypeName="System.Decimal" /></TypeDescriptors></TypeDescriptor></TypeDescriptors></TypeDescriptor></Parameter>
+              </Parameters>
+              <MethodInstances>
+                <Association Name="SmalblockToBRStatusViewAssociationNavigator" Type="AssociationNavigator" ReturnParameterName="bRStatusViewList" ReturnTypeDescriptorPath="BRStatusViewList">
+                  <SourceEntity Name="Smalblock" Namespace="OdataBCSSample.ReferenceDataModel" />
+                  <DestinationEntity Name="BRStatusView" Namespace="OdataBCSSample.ReferenceDataModel" />
+                </Association>
+              </MethodInstances></Method>
+            <Method Name="ReadItem">
+              <Parameters>
+                <Parameter Name="smalblock" Direction="Return">
+                  <TypeDescriptor Name="Smalblock" IsCollection="false" TypeName="OdataBCSSample.SmallBlock, ReferenceDataModel">
+                    <TypeDescriptors>
+                      <TypeDescriptor Name="SmallBlock1" IdentifierName="SmallBlock1" TypeName="System.String" />
+                      <TypeDescriptor Name="SmallAC" IsCollection="false" TypeName="System.Decimal" />
+                      <TypeDescriptor Name="MineArea" TypeName="System.String" />
+                      <TypeDescriptor Name="Id" IsCollection="false" TypeName="System.Int64" />
+                      <TypeDescriptor Name="CompanyID" TypeName="System.String" />
+                      <TypeDescriptor Name="LargeBlock" TypeName="System.String" />
+                      <TypeDescriptor Name="FeatId" IsCollection="false" TypeName="System.Int64" /></TypeDescriptors></TypeDescriptor></Parameter>
+                <Parameter Name="smallBlock1" Direction="In">
+                  <TypeDescriptor Name="SmallBlock1" TypeName="System.String" IdentifierEntityName="Smalblock" IdentifierEntityNamespace="OdataBCSSample.ReferenceDataModel" IdentifierName="SmallBlock1" /></Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Name="ReadItem" Type="SpecificFinder" ReturnParameterName="smalblock" ReturnTypeDescriptorPath="Smalblock" />
+              </MethodInstances></Method>
+          </Methods>
+          </Entity>
+      </Entities>
+    </LobSystem>
+  </LobSystems>
+</Model>
